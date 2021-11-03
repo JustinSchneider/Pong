@@ -51,7 +51,10 @@ public class Player : MonoBehaviour
 
     public void Hide()
     {
-        meshRenderer.material.DOFade(0f, 0f);
+        if (meshRenderer != null)
+        {
+            meshRenderer.material.DOFade(0f, 0f);
+        }
     }
 
     public void Show()

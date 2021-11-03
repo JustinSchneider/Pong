@@ -35,8 +35,12 @@ public class Ball : MonoBehaviour
 
     public void Freeze()
     {
-        rb.velocity = Vector3.zero;
-        rb.angularVelocity = Vector3.zero;
+        if (rb != null)
+        {
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+        }
+        
     }
 
     private void OnCollisionEnter(Collision collision)

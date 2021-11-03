@@ -21,7 +21,7 @@ namespace Managers
 
         public ParticleSystem scoreEffect;
 
-        private void Awake()
+        private void Start()
         {
             ball.Hide();
             player1.Hide();
