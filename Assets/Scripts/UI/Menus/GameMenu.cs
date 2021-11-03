@@ -2,7 +2,7 @@
 
 namespace UI.Menus
 {
-    public class Menu: MonoBehaviour
+    public class GameMenu: MonoBehaviour
     {
         
     }

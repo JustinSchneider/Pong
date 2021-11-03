@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using Controllers;
 using UnityEngine;
 
@@ -13,10 +11,11 @@ public class ScoreZone : MonoBehaviour
 
         if (ball != null)
         {
-            Debug.Log($"Player {scoreForPlayer} Scores!");
+            CoreController.Instance.GameManager.PlayScoreEffect(other.transform.position);
+            
             CoreController.Instance.GameManager.IncrementScore(scoreForPlayer);
-            ball.Freeze();
-            ball.transform.position = new Vector3(0, -20, 0);
+            ball.PlayBurst();
+            ball.Hide();
         }
     }
 }

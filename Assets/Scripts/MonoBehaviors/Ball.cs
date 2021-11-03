@@ -1,13 +1,13 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Constants;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class Ball : MonoBehaviour
 {
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip bounce;
+    [SerializeField] private AudioClip burst;
+    
     private Rigidbody rb;
     private Vector3 moveDirection;
     private bool isBallActive = false;
@@ -18,6 +18,7 @@ public class Ball : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void PrepForLaunch()
@@ -30,12 +31,6 @@ public class Ball : MonoBehaviour
     public void Update()
     {
         lastFrameVelocity = rb.velocity;
-        
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            PrepForLaunch();
-            Launch();
-        }
     }
 
     public void Freeze()
@@ -51,10 +46,22 @@ public class Ball : MonoBehaviour
     
     private void Bounce(Vector3 collisionNormal)
     {
+        audioSource.PlayOneShot(bounce);
         var speed = lastFrameVelocity.magnitude;
         var direction = Vector3.Reflect(lastFrameVelocity.normalized, collisionNormal);
 
         rb.velocity = direction * speed;
+    }
+
+    public void PlayBurst()
+    {
+        audioSource.PlayOneShot(burst);    
+    }
+    
+    public void Hide()
+    {
+        Freeze();
+        transform.position = new Vector3(0, -20, 0);
     }
 
     public void Launch()

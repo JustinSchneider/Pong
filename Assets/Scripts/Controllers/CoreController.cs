@@ -1,8 +1,5 @@
 ﻿using Managers;
 using Sources.BootSequence;
-using UnityEngine;
-using UnityEngine.AddressableAssets;
-using UnityEngine.ResourceManagement.AsyncOperations;
 
 namespace Controllers
 {
@@ -10,12 +7,6 @@ namespace Controllers
     {
         public GameManager GameManager;
         public UIManager UiManager;
-        
-        void Awake()
-        {
-            base.Awake();
-            
-        }
-
+        public SoundManager SoundManager;
     }
 }
