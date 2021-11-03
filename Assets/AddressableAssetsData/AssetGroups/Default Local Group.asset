@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 9873c5c6101c669429ea51adfe3863ad
+  m_SerializeEntries:
+  - m_GUID: d7b77283c2237e248bec805fa2516369
+    m_Address: Assets/Prefabs/Gameplay/Ball.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 32cb49f641042c74db3707a220607ae7
+    m_Address: Assets/Prefabs/Gameplay/Player1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 64a0b7f58710e53409ac3d2fd9e2d9ba
+    m_Address: Assets/Prefabs/Gameplay/Player2.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8506428c4c203ab4ebc240ea7193543c
+    m_Address: Assets/Prefabs/Gameplay/Level Geometry.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f4dd45c6e5ef2944294c9d6f94d42e7c
+    m_Address: Assets/Prefabs/BootItems/Main Camera.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 1c36a36e97f1ad14b9da1ece17cfbbe5, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 504652dc69d770947896b4f5b6c18ec0, type: 2}
+    - {fileID: 11400000, guid: 920daefeee61c1542ab170e0a91ede91, type: 2}
