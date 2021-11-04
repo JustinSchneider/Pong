@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class SoundManager : MonoBehaviour
@@ -8,9 +9,8 @@ public class SoundManager : MonoBehaviour
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
-        
-        audioSource.PlayOneShot(bgMusic);
-        audioSource.PlayScheduled(AudioSettings.dspTime + bgMusic.length);
+
+        StartCoroutine(PlaySong());
     }
 
     public void PlaySoundEffect(AudioClip clip)
@@ -22,5 +22,12 @@ public class SoundManager : MonoBehaviour
     {
         audioSource.volume = status ? 0.25f : 0.5f;
         audioSource.pitch = status ? 0.5f : 1f;
+    }
+
+    private IEnumerator PlaySong()
+    {
+        audioSource.PlayOneShot(bgMusic);
+        yield return new WaitForSeconds(bgMusic.length);
+        StartCoroutine(PlaySong());
     }
 }
