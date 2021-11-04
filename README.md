@@ -1,4 +1,4 @@
-![Pong by Justin Schneider](https://i.imgur.com/3wjpSlf.png)
+![Pong by Justin Schneider](https://i.imgur.com/Pe0KnM9.png)
 
 # Pong
 Unity project cloning the classic Pong game.
